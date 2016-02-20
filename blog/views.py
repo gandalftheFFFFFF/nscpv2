@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from .models import Blog
 from collections import defaultdict
 import operator
@@ -8,7 +8,9 @@ def index(request):
     stats = {}
 
     # Get number of blog posts:
-    count = Blog.objects.all().count()
+    blogs = get_list_or_404(Blog)
+    count = blogs.count()
+        #Blog.objects.all().count()
     stats['No. of blogs'] = count
 
     # Get random keyword frequency
