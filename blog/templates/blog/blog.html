@@ -14,6 +14,11 @@
     <p>Some helpful error message like: "Error 449: A program has encountered an error."</p>
 {% endif %}
 <hr />
+{% if posts %}
+    {% for post in posts %}
+        <p>{{ post.date }}, <a href="{% url 'blog_post' post.slug %}">{{ post.title }}</a></p>
+    {% endfor %}
+{% endif %}
 {% if latest_post %}
     <h2>{{ latest_post.title }}</h2>
     <p>{{ latest_post.date }}</p>

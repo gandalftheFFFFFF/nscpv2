@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_list_or_404
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from .models import Blog
 from collections import defaultdict
 import operator
@@ -37,5 +37,15 @@ def index(request):
     context = {
         'stats': stats,
         'latest_post': latest_post,
+        'posts': posts,
     }
     return render(request, 'blog/blog.html', context)
+
+
+def single(request, blog_slug):
+    post = get_object_or_404(Blog, slug=blog_slug)
+    template = 'blog/single.html'
+    context = {
+        'post': post,
+    }
+    return render(request, template, context)
