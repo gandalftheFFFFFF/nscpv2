@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+
+<h1 class="text-center">About</h1>
+<img src="{% static 'img/niels-clean.jpg' %}" class="img-responsive profile">
+<p>
+    My name is Niels and I'm a student at the IT-University of Copenhagen (ITU), where I study Software Development and technology.
+    I graduate in the summer of 2016 after I have written my thesis on big data and energy management. During my studies at ITU
+    I have specialised in <a href="http://www.itu.dk/Uddannelser/Kandidatuddannelser/Softwareudvikling#specialisering-business-analytics">business analytics</a>, where I have taken courses
+    such as data mining, intelligent systems programming, and big data management.
+</p>
+<p>
+    At ITU, I have also focused on learning as much about programming as is possible in my two years. While the main focus
+    of most courses have primarily been Java, I have also aquainted myself with Scala through the course Advanced Programming, which also
+    focused on functional programming.
+</p>
+<p>
+    Outside of Java and Scala, I have taught myself Python in my spare time, and I find it an interesting change from Java and Scala.
+    I have mainly used it for smaller programs/scripts, but also for my website development which I do in Python with the Django framework.
+    Examples of websites I have written with Django include <a href="http://www.gaardlauget-christianshavn.dk">gaardlauget-christianshavn</a> and <a href="{% url 'home' %}">this site</a>.
+    Common for both sites is that content -- news posts, blog posts, media -- can be added dynamically through an admin interface.
+</p>
+<p>
+    I have a bachelor degree from Copenhagen Business School in <a href="http://www.cbs.dk/uddannelse/bacheloruddannelser/bsc-in-business-asian-language-and-culture-asian-studies-programme">Business, Asian Language and Culture</a> where my focus was on Japan and Japanese language and business culture. During the bachelor work, I spent a semester studying at Rikkyo University in Tokyo, Japan. As one result of my studies in Japan, I speak Japanese on a conversational level. Both my studies have been completely in English.
+</p>
+
+<p>
+    After acquiring my bachelor degree I decided to pursue a software development path because I have a passion for both business and information technology. I would like to see myself as a connecting element between the two.
+</p>
+
+<p>
+    I'm currently employed as a student assistant in <a href="http://www.reportsoft.dk">ReportSoft</a>, where my main responsibilities
+    are helping the developers with various tasks such as writing tests for web applications, and developing financial report content and templates
+    for clients. I have worked with tools such as Scala (<a href="http://slick.typesafe.com/">Slick</a>, <a href="http://www.scalatest.org/user_guide/using_selenium">Selenium</a>), JavaScript, <a href="http://http://www.eclipse.org/birt">BIRT</a> (Business Intelligence Reporting Tool), and others.
+</p>
+<h1 class="text-center">Courses</h1>
+<div class="panel panel-default">
+    <div class="panel-heading"><h3><strong>IT-University of Copenhagen</strong></h3></div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#isp">Intelligent Systems Programming</p>
+                <div id="isp" class="collapse">Artificial Intelligence, optimization, linear programming, simplex, n-queens, contraint programming, binary decision diagrams, graph search</div>
+            </li>
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#btm">Big Data Management</p>
+                <div id="btm" class="collapse">Hadoop, MapReduce</div>
+            </li>
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#dm">Data Mining</p>
+                <div id="dm" class="collapse">Data visualization, statistics, frequent patter mining, apriori, cluster identification, k-means, classificaion, k nearest neighbors, decision trees, information theory, ID3, neural networks</div>
+            </li>
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#dism">Discrete Mathematics</p>
+                <div id="dism" class="collapse">Set theory, probability, automata, grammar, induction, graph theory</div>
+            </li>
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#ads">Algorithms and Data Structures</p>
+                <div id="ads" class="collapse">Sorting, selection sort, insertion, quick sort, merge sort, tim sort, structures, stacks, queues, maps, searches</div>
+            </li>
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#adpro">Advanced Programming</p>
+                <div id="adpro" class="collapse">
+                    Scala, functional programming, recursion, streams, pattern matching,
+                    lenses, finger trees, monoids, monads, testing
+                </div>
+            </li>
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#sesq">Software Engineering and Software Qualities</p>
+                <div id="sesq" class="collapse">
+                    Development models, waterfall, agile, scrum, iterative development, team work protocol
+                </div>
+            </li>
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#db">Database Design</p>
+                <div id="db" class="collapse">
+                    Databases, normalization, schemas, er-diagrams, mysql
+                </div>
+            </li>
+            <li class="list-group-item">
+                <p  class="fake-link" data-toggle="collapse" data-target="#dynweb">Dynamic Webdesign</p>
+                <div id="dynweb" class="collapse">
+                    Html, css, javascript, php, mysql, bootstrap, mobile-first development
+                </div>
+            </li>
+        </ul>
+    <div class="panel-heading"><h3><strong>Copenhagen Business School</strong></h3></div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <p>Bachelor Project</p>
+        </li>
+        <li class="list-group-item">
+            <p>International Business in Asian Markets</p>
+        </li>
+        <li class="list-group-item">
+            <p>Japanese (all semesters)</p>
+        </li>
+        <li class="list-group-item">
+            <p>Managerial Accounting</p>
+        </li>
+        <li class="list-group-item">
+            <p>Asian Economic Organisation and Competitiveness</p>
+        </li>
+        <li class="list-group-item">
+            <p>Principles of Corporate Finance</p>
+        </li>
+        <li class="list-group-item">
+            <p>Regional Economic Integration in Asia</p>
+        </li>
+        <li class="list-group-item">
+            <p>Intercultural Organisation</p>
+        </li>
+        <li class="list-group-item">
+            <p>Second Year Project</p>
+        </li>
+        <li class="list-group-item">
+            <p>Microeconomics</p>
+        </li>
+        <li class="list-group-item">
+            <p>International Relations</p>
+        </li>
+        <li class="list-group-item">
+            <p>Marketing</p>
+        </li>
+        <li class="list-group-item">
+            <p>Asian Societies from a Comparative Perspective</p>
+        </li>
+        <li class="list-group-item">
+            <p>Business Research Methods</p>
+        </li>
+        <li class="list-group-item">
+            <p>First Year Project</p>
+        </li>
+    </ul>
+    <div class="panel-heading"><h3><strong>Rikkyo University, Tokyo, Japan</strong></h3></div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <p>Japanese language courses</p>
+        </li>
+        <li class="list-group-item">
+            <p>Marketing in Japan</p>
+        </li>
+        <li class="list-group-item">
+            <p>Marketing Positioning Strategy</p>
+        </li>
+        <li class="list-group-item">
+            <p>Business Strategy: International Business</p>
+        </li>
+        <li class="list-group-item">
+            <p>Business Communication</p>
+        </li>
+        <li class="list-group-item">
+            <p>Business and Society in Japan</p>
+        </li>
+        <li class="list-group-item">
+            <p>Coporate Social Responsibility: A Japanese Perspective</p>
+        </li>
+        <li class="list-group-item">
+            <p>Japanese Culture</p>
+        </li>
+    </ul>
+</div>
+
+
+{% endblock content %}

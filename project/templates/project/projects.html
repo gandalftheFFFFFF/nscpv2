@@ -1,0 +1,18 @@
+{% extends 'project/project-base.html' %}
+
+{% block project-content %}
+
+<h2><strong>Latest projects:</strong></h2>
+{% if projects %}
+    {% for p in projects %}
+        <p><a href="{% url 'single-project' p.slug %}">{{ p.title }}</a></p>
+        <p>{{ p.short_description }}</p>
+        <p>{{ p.date }}</p>
+        <hr />
+    {% endfor %}
+    <p><i>Check out the projects <a href="{% url 'project-archive' %}">archive</a> for older projects, or search for specific ones.</i></p>
+{% else %}
+    <p>There are no projects at this time. Sorry!</p>
+{% endif %}
+
+{% endblock %}

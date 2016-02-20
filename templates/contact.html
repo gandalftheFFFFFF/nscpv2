@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>
+    Contact
+</h1>
+<p>
+    If you wish to contact me, please use any of the channels listed below. Alternatively, you are welcome to contact me through the provided form.
+</p>
+
+<div class="col-lg-3 text-center">
+    <a href="https://www.facebook.com/niels.s.pedersen">
+        <i class="fa fa-facebook fa-4x"></i>
+        <p>Facebook profile</p>
+    </a>
+</div>
+<div class="col-lg-3 text-center">
+    <a href="https://github.com/nielspedersen">
+        <i class="fa fa-github fa-4x"></i>
+        <p>Github profile</p>
+    </a>
+</div>
+<div class="col-lg-3 text-center">
+    <a href="https://dk.linkedin.com/in/nielsschroderpedersen">
+        <i class="fa fa-linkedin fa-4x"></i>
+        <p>LinkedIn profile</p>
+    </a>
+</div>
+<div class="col-lg-3 text-center">
+    <a href="mailto:niels@nscp.dk">
+        <i class="fa fa-envelope fa-4x"></i>
+        <p>Email</p>
+    </a>
+</div>
+<div class="col-xs-12">
+    <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                        <div class="contact-form-error">
+                            <p>{{ error }}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <p>{{ field.label }}: {{ field }}</p>
+            </div>
+        {% endfor %}
+        <input type="submit" value="Send" class="form-control contact-send-button">
+
+    </form>
+</div>
+
+{% endblock %}

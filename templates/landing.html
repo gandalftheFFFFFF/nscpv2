@@ -1,0 +1,26 @@
+<html>
+<head>
+    {% include 'header.html' %}
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="header">
+            <div class="splash">
+                <h1 class="text-left">Niels Pedersen</h1>
+                <hr />
+                <p class="text-right">
+                    <a href="{% url 'about' %}">About</a>&emsp;
+                    <a href="{% url 'projects' %}">Projects</a>&emsp;
+                    <a href="#">CV</a>&emsp;
+                    <a href="#">Blog</a>&emsp;
+                    <a href="{% url 'contact' %}">Contact</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

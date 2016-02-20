@@ -1,0 +1,27 @@
+{% extends 'project/project-base.html' %}
+
+{% block project-content %}
+    <h2><strong>Search results</strong></h2>
+    {% if results %}
+        <hr />
+        {% for r in results %}
+            <p><a href="{% url 'single-project' r.result.slug %}">{{ r.result.title }}</a></p>
+            <p>Description: {{ r.result.short_description }}</p>
+            <p><i>
+                <strong>Matches:</strong>
+                {% for match in r.matches %}
+                    {{ match }}
+                    {% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </i></p>
+            {% if not forloop.last %}
+                <hr />
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>No projects contain the search terms :(</p>
+        <p>Try again!</p>
+    {% endif %}
+
+
+{% endblock %}

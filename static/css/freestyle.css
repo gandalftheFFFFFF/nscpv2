@@ -1,0 +1,187 @@
+body {
+    font-family: 'Droid Serif';
+    margin-top: 5%;
+}
+
+p {
+    font-size: 110%;
+  line-height: 180%;
+  font-family: 'Droid Serif';
+}
+
+.header {
+    margin-top: 100px;
+}
+
+.header hr {
+    border-color: #C4C4C4;
+}
+
+.content a {
+    color: #B40404;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.splash {
+    word-wrap: break-word;
+    margin-top: 30vh;
+}
+
+.splash h1 {
+    !font-family: 'Fjalla One';
+    font-size: 350%;
+}
+
+.splash a {
+    color: #B40404;
+}
+
+.profile {
+    float: right;
+}
+
+.menu-border {
+    border-left: 1px solid black;
+}
+
+.menu ul li {
+    font-size: 110%;
+    line-height: 180%;
+}
+
+.menu a {
+    color: #B40404;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.justify-text {
+    text-align: justify;
+}
+
+.icon-bar {
+    background-color:#B40404;
+}
+
+.burger-bg {
+    background-color: whte;
+}
+
+
+/* Creates a vertical nav starting at 768px (sm) */
+@media (min-width: 768px) {
+    .bootstrap-vertical-nav .navbar .navbar-collapse {
+      padding: 0;
+      max-height: none;
+    }
+    .bootstrap-vertical-nav .navbar ul {
+      float: none;
+    }
+    .bootstrap-vertical-nav .navbar ul:not {
+      display: list-item;
+    }
+    .bootstrap-vertical-nav .navbar li {
+      float: none;
+      display: list-item;
+    }
+
+    .bootstrap-vertical-nav .navbar-nav .nav-item+.nav-item {
+      margin-left: 0;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block!important;
+    }
+}
+
+
+
+/* Put any custom CSS you want for your menu when it is collapsed */
+@media (max-width: 768px) {
+   .bootstrap-vertical-nav {
+
+   }
+
+   .menu-border {
+        border: none;
+   }
+}
+
+
+/* MENU COLORS */
+
+.nav > li > a:hover{
+
+    background-color: #F3F3F3;
+    color: #B40404;
+}
+
+.nav-item {
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.nav {
+    box-sizing: border-box;
+}
+
+
+a {
+    color: #B40404;
+}
+
+i.fake-back {
+    color: #B40404;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #B40404;
+}
+
+p a {
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.courses ul li {
+    font-size: 110%;
+    margin-bottom: 5px;
+}
+
+.form-group p {
+    font-weight: bold;
+}
+
+.contact-send-button {
+    color: white;
+    background-color: #B40404;
+}
+
+.contact-form-error p {
+    color: #B40404;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Suranna';
+}
+
+.custom-panel {
+    border: 1px solid #C4C4C4;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}

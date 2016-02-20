@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% block project-header %}
+        <div class="col-xs-3">
+            <p><a href="{% url 'project-archive' %}">Archive</a></p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-3 hidden-xs">
+            <!-- buffer -->
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-9 text-right">
+            <form class="form-inline" action="{% url 'project-search' %}" method="GET">
+                {% csrf_token %}
+                {% if form.terms.error %}
+                    <p>{{ form.terms.error }}</p>
+                {% endif %}
+                    <p>{{ form.terms }}</p>
+            </form>
+        </div>
+    <div class="col-xs-12">
+    <hr />
+    </div>
+    {% endblock %}
+    {% block project-content %}
+
+    {% endblock %}
+{% endblock %}

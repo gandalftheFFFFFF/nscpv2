@@ -1,0 +1,31 @@
+{% extends 'project/project-base.html' %}
+
+{% block project-content %}
+
+<h2><strong>Project archive</strong></h2>
+
+{% if archive %}
+
+    {% regroup archive by date|date:"Y" as year_list %}
+
+    {% for year in year_list %}
+        <div class="col-sm-6">
+            <h3><strong>{{ year.grouper }}</strong></h3>
+            {% regroup year.list by date|date:"M" as month_list %}
+            {% for month in month_list %}
+                <p><strong>{{ month.grouper }}</strong></p>
+                <ul>
+                {% for m in month.list %}
+                    <li><a href="{% url 'single-project' m.slug %}">{{ m }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+        <div class="visible-xs">{% if not forloop.last %}<hr />{% endif %}</div>
+    {% endfor %}
+
+{% else %}
+    <p>There doesn't seem to be any projects available!</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'project/project-base.html' %}
+
+{% block project-content %}
+<h2><strong>{{ project.title }}</strong></h2>
+<p>{{ project.date }}</p>
+{% if project.url %}<p><i class="fa fa-link"></i> <a href="{{ project.url }}">{{ project.url }}</a></p>{% endif %}
+<p>{{ project.long_description|safe }}</p>
+
+{% endblock %}

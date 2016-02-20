@@ -1,0 +1,25 @@
+
+body {
+	font-family: 'Droid Serif', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Suranna', serif;
+}
+
+p {
+	font-size: 110%;
+	line-height: 180%;
+}
+
+a {
+	color: #B40404;
+	font-weight: bold;
+}
+
+.fake-link {
+	color: #B40404;
+	font-weight: bold;
+	cursor: pointer;
+	cursor: hand;
+}

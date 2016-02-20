@@ -1,0 +1,9 @@
+*.pyc
+*.pot
+*.log
+*.sql
+.idea/
+db.sqlite3
+nscpv2/settings.py
+nscpv2/dump.sql
+nscpv2/local_settings.py
