@@ -16,7 +16,7 @@ def index(request):
     # Get random keyword frequency
     # 1: Get all tags
     tags = []
-    posts = Blog.objects.all()
+    posts = get_list_or_404(Blog)
     for p in posts:
         tags.append(p.tags.names())
     # Flatten
