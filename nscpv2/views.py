@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from django.core.mail import send_mail
 from .forms import ContactForm
 from project.models import Project
@@ -7,6 +7,7 @@ from blog.models import Blog
 
 def home(request):
     template = 'home.html'
+
     latest_project = Project.objects.all()[0]
     latest_blog = Blog.objects.all().order_by('date')[0]
     context = {

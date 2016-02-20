@@ -8,15 +8,14 @@ def index(request):
     stats = {}
 
     # Get number of blog posts:
-    blogs = get_list_or_404(Blog)
-    count = blogs.count()
+    count = Blog.objects.all().count()
         #Blog.objects.all().count()
     stats['No. of blogs'] = count
 
     # Get random keyword frequency
     # 1: Get all tags
     tags = []
-    posts = get_list_or_404(Blog)
+    posts = Blog.objects.all()
     for p in posts:
         tags.append(p.tags.names())
     # Flatten
