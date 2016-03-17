@@ -7,13 +7,17 @@
         <h3><strong><a href="{% url 'blog_post' latest_blog.slug %}">{{ latest_blog.title }}</a></strong></h3>
         <p>{{ latest_blog.date }}</p>
         <p>{{ latest_blog.description }}</p>
-        <p>{{ latest_blog.body|safe|slice:":300" }}...<a href="{% url 'blog_post' latest_blog.slug %}"><em>(read more)</em></a> </p>
+        <p>{{ latest_blog.body|safe|slice:":300" }}
+            {% if latest_blog.body|safe|length > 300 %}... <a href="{% url 'blog_post' latest_blog.slug %}"><em>(read more)</em></a>{% endif %}
+        </p>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <h3><strong><a href="#">{{ latest_project.title }}</a></strong></h3>
         <p>{{ latest_project.date }}</p>
         <p>{{ latest_project.short_description }}</p>
-        <p>{{ latest_project.long_description|safe|slice:":300" }}...<a href="{% url 'single-project' latest_project.slug %}"><em>(read more)</em></a> </p>
+        <>{{ latest_project.long_description|safe|slice:":300" }}
+            {% if latest_project.long_description|safe|length > 300 %}... <a href="{% url 'single-project' latest_project.slug %}"><em>(read more)</em></a>{% endif %}
+        </p>
     </div>
 </div>
 
