@@ -15,7 +15,7 @@
         <h3><strong><a href="#">{{ latest_project.title }}</a></strong></h3>
         <p>{{ latest_project.date }}</p>
         <p>{{ latest_project.short_description }}</p>
-        <>{{ latest_project.long_description|safe|slice:":300" }}
+        {{ latest_project.long_description|safe|slice:":300" }}
             {% if latest_project.long_description|safe|length > 300 %}... <a href="{% url 'single-project' latest_project.slug %}"><em>(read more)</em></a>{% endif %}
         </p>
     </div>
