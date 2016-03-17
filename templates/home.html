@@ -1,8 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-<p>Some time I will find a use for a 'home' page. Meanwhile, take a look at my blog and portfolio :)</p>
-<p>Latest blog: <a href="#">{{ latest_blog.title }}</a></p>
-<p>Latest project: <a href="#">{{ latest_project }}</a></p>
+<p>Welcome to my personal website! Check out the latest blog/project below, or browse the site in whichever order you want.</p>
 
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h3><strong><a href="{% url 'blog_post' latest_blog.slug %}">{{ latest_blog.title }}</a></strong></h3>
+        <p>{{ latest_blog.date }}</p>
+        <p>{{ latest_blog.description }}</p>
+        <p>{{ latest_blog.body|safe|slice:":300" }}...<a href="{% url 'blog_post' latest_blog.slug %}"><em>(read more)</em></a> </p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h3><strong><a href="#">{{ latest_project.title }}</a></strong></h3>
+        <p>{{ latest_project.date }}</p>
+        <p>{{ latest_project.short_description }}</p>
+        <p>{{ latest_project.long_description|safe|slice:":300" }}...<a href="{% url 'single-project' latest_project.slug %}"><em>(read more)</em></a> </p>
+    </div>
+</div>
 
 {% endblock content %}
