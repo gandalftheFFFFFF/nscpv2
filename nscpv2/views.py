@@ -9,7 +9,7 @@ def home(request):
     template = 'home.html'
 
     latest_project = Project.objects.all()[0]
-    latest_blog = Blog.objects.all().order_by('date')[0]
+    latest_blog = Blog.objects.all().order_by('-date')[0]
     context = {
         'latest_project': latest_project,
         'latest_blog': latest_blog,
